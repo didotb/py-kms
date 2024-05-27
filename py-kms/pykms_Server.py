@@ -259,7 +259,7 @@ def server_options():
                                     help = srv_options['backlog']['help'], type = int)
         connect_parser.add_argument("-u", "--no-reuse", action = "append_const", dest = srv_options['reuse']['des'], const = False, default = [],
                                     help = srv_options['reuse']['help'])
-        connect_parser.add_argument("-d", "--dual", action = "store_true", dest = srv_options['dual']['des'], default = srv_options['dual']['def'],
+        connect_parser.add_argument("-d", "--dual", action = "store_false", dest = srv_options['dual']['des'], default = srv_options['dual']['def'],
                                     help = srv_options['dual']['help'])
 
         try:
